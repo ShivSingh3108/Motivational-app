@@ -1,0 +1,386 @@
+🎄🎇🎇🎇🎇🎇🎇🎇🎇MERRY CHRISTMAS & HAPPY NEW YEAR🎇🎇🎇🎇🎇🎇🎇🎇🎄
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa's Quiz </title>
+    <style>
+        body {
+            font-family: 'Gabriola', 'Arial', 'Times Roman';
+            font-size: xx-large;
+            text-align: center;
+            -webkit-text-fill-color: #6e0911;
+            background-color: #f31c39;
+        }
+        .container {
+            margin-top: 10px;
+            padding: 100px;
+            border: 20px solid rgb(0, 255, 106);
+            border-radius: 20px;
+            background-color: #e3f827;
+            display:block;
+            box-shadow: 200px #e3f827;
+            align-self: center;
+       
+        }
+        button {
+            margin: 50px;
+            padding: 10px 30px;
+            font-size: large;
+            cursor: pointer;
+            border-radius: 100px;
+            border:#16ff0e;
+            background-color: #ff5722;
+            color: #ff0000;
+            box-shadow:100px #6e0911;
+        }
+        button:hover {
+            background-color:200px #e64a19;
+          
+        }
+         .hidden {
+            display: none;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .skin-album {
+            margin-top: 50px;
+            padding: 20px;
+            border: 2px solid green;
+            border-radius: 15px;
+            background-color: #fff;
+        }
+        .skin-album h2 {
+            margin-bottom: 20px;
+        }
+        .skin-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+        .skin-item {
+            text-align: center;
+            opacity: 1;
+            cursor: pointer;
+        }
+        .skin-item img {
+            width: 100%;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+        .selected {
+            border-color: gold;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎅 Santa's Quiz 🎅</h1>
+        <p>Answer all questions correctly!</p>
+
+        <div id="question1">
+            <p><strong>Question 1:</strong> What is the color of Santa's hat?</p>
+            <button onclick="checkAnswer(1, 'Red')">Red</button>
+            <button onclick="checkAnswer(1, 'Green')">Green</button>
+        </div>
+
+        <div id="question2" class="hidden">
+            <p><strong>Question 2:</strong> How many reindeer does Santa have?</p>
+            <button onclick="checkAnswer(2, '9')">9</button>
+            <button onclick="checkAnswer(2, '8')">8</button>
+        </div>
+
+        <div id="question3" class="hidden">
+            <p><strong>Question 3:</strong> What does Santa give to good children?</p>
+            <button onclick="checkAnswer(3, 'Coal')">Coal</button>
+            <button onclick="checkAnswer(3, 'Gifts')">Gifts</button>
+        </div>
+
+        <div id="question4" class="hidden">
+            <p><strong>Question 4:</strong> What is the name of Santa's sleigh?</p>
+            <button onclick="checkAnswer(4, 'Sleigh')">Sleigh</button>
+            <button onclick="checkAnswer(4, 'Carriage')">Carriage</button>
+        </div>
+
+        <div id="question5" class="hidden">
+            <p><strong>Question 5:</strong> Which reindeer has a red nose?</p>
+            <button onclick="checkAnswer(5, 'Rudolph')">Rudolph</button>
+            <button onclick="checkAnswer(5, 'Dasher')">Dasher</button>
+        </div>
+
+        <div id="question6" class="hidden">
+            <p><strong>Question 6:</strong> Who helps Santa?</p>
+            <button onclick="checkAnswer(6, 'Fairies')">Fairies</button>
+            <button onclick="checkAnswer(6, 'Elves')">Elves</button>
+        </div>
+
+        <div id="question7" class="hidden">
+            <p><strong>Question 7:</strong> What natural phenomenon is visible near Santa's home?</p>
+            <button onclick="checkAnswer(7, 'Aurora')">Aurora</button>
+            <button onclick="checkAnswer(7, 'Thundering')">Thundering</button>
+        </div>
+
+        <div id="question8" class="hidden">
+            <p><strong>Question 8:</strong> Shape of Snowflakes?</p>
+            <button onclick="checkAnswer(8, 'Pentagon')">Pentagon</button>
+            <button onclick="checkAnswer(8, 'Hexagon')">Hexagon</button>
+        </div>
+
+        <div id="question9" class="hidden">
+            <p><strong>Question 9:</strong> What kind of ice hangs from roof in winter?</p>
+            <button onclick="checkAnswer(9, 'Hail')">Haik</button>
+            <button onclick="checkAnswer(9, 'Icicle')">Icicle</button>
+        </div>
+
+        <div id="question10" class="hidden">
+            <p><strong>Question 10:</strong> Popular Christmas beverage which is also known as "milk punch"?</p>
+            <button onclick="checkAnswer(10, 'Eggnog')">Eggnog</button>
+            <button onclick="checkAnswer(10, 'Chocolate milk')">Chocolate milk</button>
+        </div>
+
+        <div id="question11" class="hidden">
+            <p><strong>Question 11:</strong> Santa's sleigh made of in Traditional lore?</p>
+            <button onclick="checkAnswer(11, 'Wood')">Wood</button>
+            <button onclick="checkAnswer(11, 'Gold')">Gold</button>
+        </div>
+
+        <div id="question12" class="hidden">
+            <p><strong>Question 12:</strong> Where was baby Jesus born?</p>
+            <button onclick="checkAnswer(12, 'Bethlehem')">Bethlehem</button>
+            <button onclick="checkAnswer(12, 'Hut')">Hut</button>
+        </div>
+
+        <div id="question13" class="hidden">
+            <p><strong>Question 13:</strong> Which country did eggnog come from?</p>
+            <button onclick="checkAnswer(13, 'Italy')">Italy</button>
+            <button onclick="checkAnswer(13, 'England')">England</button>
+        </div>
+
+        <div id="question14" class="hidden">
+            <p><strong>Question 14:</strong> What are you Supposed to do when you find yourself under the mistletoe?</p>
+            <button onclick="checkAnswer(14, 'dance')">dance</button>
+            <button onclick="checkAnswer(14, 'Kiss')">Kiss</button>
+        </div>
+
+        <div id="question15" class="hidden">
+            <p><strong>Question 15:</strong> How many names of Santa's reindeer starts with "D"?</p>
+            <button onclick="checkAnswer(15, '2')">2</button>
+            <button onclick="checkAnswer(15, '3')">3</button>
+        </div>
+
+        <div id="question16" class="hidden">
+            <p><strong>Question 16:</strong> Grinch's colour?</p>
+            <button onclick="checkAnswer(16, 'Green')">Green</button>
+            <button onclick="checkAnswer(16, 'Blue')">Blue</button>
+        </div>
+
+        <div id="question17" class="hidden">
+            <p><strong>Question 17:</strong> Christmas treat Shaped like shepherd's staff?</p>
+            <button onclick="checkAnswer(17, 'Ginger bread')">Ginger bread</button>
+            <button onclick="checkAnswer(17, 'Candy cane')">Candy cane</button>
+        </div>
+
+        <div id="question18" class="hidden">
+            <p><strong>Question 18:</strong> Traditionally what do you leave out for Santa on Christmas eve?</p>
+            <button onclick="checkAnswer(18, 'Milk & Cookies')">Milk & Cookies</button>
+            <button onclick="checkAnswer(18, 'Cupcakes')">Cupcakes</button>
+        </div>
+
+        <div id="question19" class="hidden">
+            <p><strong>Question 19:</strong> Footwears of Elves ?</p>
+            <button onclick="checkAnswer(19, 'Boots')">Boots</button>
+            <button onclick="checkAnswer(19, 'Shoes & Bells')">Shoes & Bells</button>
+        </div>
+
+        <div id="question20" class="hidden">
+            <p><strong>Question 20:</strong> Christmas decoration made up of evergreen and berries?</p>
+            <button onclick="checkAnswer(20, 'Garland')">Garland</button>
+            <button onclick="checkAnswer(20, 'Wreath')">Wreath</button>
+        </div>
+
+        <div id="question21" class="hidden">
+            <p><strong>Question 21:</strong> Colour of Mistletoe berries ?</p>
+            <button onclick="checkAnswer(21, 'White')">White</button>
+            <button onclick="checkAnswer(21, 'Red')">Red</button>
+        </div>
+
+        <div id="question22" class="hidden">
+            <p><strong>Question 22:</strong> What's on top of the Christmas Tree?</p>
+            <button onclick="checkAnswer(22, 'Star')">Star</button>
+            <button onclick="checkAnswer(22, 'Moon')">Moon</button>
+        </div>
+
+        <div id="question23" class="hidden">
+            <p><strong>Question 23:</strong> From Where does Santa Enter's house?</p>
+            <button onclick="checkAnswer(23, 'Door')">Door</button>
+            <button onclick="checkAnswer(23, 'Chimney')">Chimney</button>
+        </div>
+
+        <div id="question24" class="hidden">
+            <p><strong>Question 24:</strong> Who is not Santa's Reindeer?</p>
+            <button onclick="checkAnswer(24, 'Dancer')">Dancer</button>
+            <button onclick="checkAnswer(24, 'Belton')">Belton</button>
+        </div>
+
+        <div id="question25" class="hidden">
+            <p><strong>Question 25:</strong> Santa has list of ?</p>
+            <button onclick="checkAnswer(25, 'Naughty & Nice')">Naughty & Nice</button>
+            <button onclick="checkAnswer(25, 'Quit & Noisy')">Quit & Noisy</button>
+        </div>
+
+        <div id="question26" class="hidden">
+            <p><strong>Question 26:</strong> Select the right Spelling ?</p>
+            <button onclick="checkAnswer(26,  'Arrpheus')">Arrpheus  </button>
+            <button onclick="checkAnswer(26, 'Arpheeus')">Arpheeus</button>
+        </div>
+
+        <div id="result" class="hidden">
+            <h2>Congratulations! 🎉</h2>
+            <p>You won</p>
+            <p>High Score: <span id="highscore">0</span></p>
+        </div>
+
+        <div id="fail" class="hidden">
+            <h2>Oops! 🎅</h2>
+            <p>You Failed . Try again!</p>
+        </div>
+    </div>
+        
+
+    <script>
+        let correctAnswers = 0;
+        let highscore = 0;
+    
+
+        function checkAnswer(question, answer) {
+            if (question === 1 && answer === 'Red') {
+                correctAnswers++;
+                document.getElementById('question1').classList.add('hidden');
+                document.getElementById('question2').classList.remove('hidden');
+            } else if (question === 2 && answer === '9'){
+                correctAnswers++;
+                document.getElementById('question2').classList.add('hidden');
+                document.getElementById('question3').classList.remove('hidden');
+            } else if (question === 3 && answer === 'Gifts') {
+                correctAnswers++;
+                document.getElementById('question3').classList.add('hidden');
+                document.getElementById('question4').classList.remove('hidden');
+            } else if (question === 4 && answer === 'Sleigh') {
+                correctAnswers++;
+                document.getElementById('question4').classList.add('hidden');
+                document.getElementById('question5').classList.remove('hidden');
+            } else if (question === 5 && answer === 'Rudolph') {
+                correctAnswers++;
+                document.getElementById('question5').classList.add('hidden');
+                document.getElementById('question6').classList.remove('hidden');
+            } else if (question === 6 && answer === 'Elves') {
+                correctAnswers++;
+                document.getElementById('question6').classList.add('hidden');
+                document.getElementById('question7').classList.remove('hidden');    
+            } else if (question === 7 && answer === 'Aurora') {
+                correctAnswers++;
+                document.getElementById('question7').classList.add('hidden');
+                document.getElementById('question8').classList.remove('hidden');
+            } else if (question === 8 && answer === 'Hexagon') {
+                correctAnswers++;
+                document.getElementById('question8').classList.add('hidden');
+                document.getElementById('question9').classList.remove('hidden');
+            } else if (question === 9 && answer === 'Icicle') {
+                correctAnswers++;
+                document.getElementById('question9').classList.add('hidden');
+                document.getElementById('question10').classList.remove('hidden');
+            } else if (question === 10 && answer === 'Eggnog') {
+                correctAnswers++;
+                document.getElementById('question10').classList.add('hidden');
+                document.getElementById('question11').classList.remove('hidden');
+            } else if (question === 11 && answer === 'Wood') {
+                correctAnswers++;
+                document.getElementById('question11').classList.add('hidden');
+                document.getElementById('question12').classList.remove('hidden');
+            } else if (question === 12 && answer === 'Bethlehem') {
+                correctAnswers++;
+                document.getElementById('question12').classList.add('hidden');
+                document.getElementById('question13').classList.remove('hidden');
+            } else if (question === 13 && answer === 'England') {
+                correctAnswers++;
+                document.getElementById('question13').classList.add('hidden');
+                document.getElementById('question14').classList.remove('hidden');
+            } else if (question === 14 && answer === 'Kiss') {
+                correctAnswers++;
+                document.getElementById('question14').classList.add('hidden');
+                document.getElementById('question15').classList.remove('hidden');
+            } else if (question === 15 && answer === '3') {
+                correctAnswers++;
+                document.getElementById('question15').classList.add('hidden');
+                document.getElementById('question16').classList.remove('hidden');
+            } else if (question === 16 && answer === 'Green') {
+                correctAnswers++;
+                document.getElementById('question16').classList.add('hidden');
+                document.getElementById('question17').classList.remove('hidden');
+            } else if (question === 17 && answer === 'Candy cane') {
+                correctAnswers++;
+                document.getElementById('question17').classList.add('hidden');
+                document.getElementById('question18').classList.remove('hidden');
+            } else if (question === 18 && answer === 'Milk & Cookies') {
+                correctAnswers++;
+                document.getElementById('question18').classList.add('hidden');
+                document.getElementById('question19').classList.remove('hidden');
+            } else if (question === 19 && answer === 'Shoes & Bells') {
+                correctAnswers++;
+                document.getElementById('question19').classList.add('hidden');
+                document.getElementById('question20').classList.remove('hidden');
+            } else if (question === 20 && answer === 'Wreath') {
+                correctAnswers++;
+                document.getElementById('question20').classList.add('hidden');
+                document.getElementById('question21').classList.remove('hidden');
+            } else if (question === 21 && answer === 'White') {
+                correctAnswers++;
+                document.getElementById('question21').classList.add('hidden');
+                document.getElementById('question22').classList.remove('hidden');
+            } else if (question === 22 && answer === 'Star') {
+                correctAnswers++;
+                document.getElementById('question22').classList.add('hidden');
+                document.getElementById('question23').classList.remove('hidden');
+            } else if (question === 23 && answer === 'Chimney') {
+                correctAnswers++;
+                document.getElementById('question23').classList.add('hidden');
+                document.getElementById('question24').classList.remove('hidden');
+            } else if (question === 24 && answer === 'Belton') {
+                correctAnswers++;
+                document.getElementById('question24').classList.add('hidden');
+                document.getElementById('question25').classList.remove('hidden');
+            } else if (question === 25 && answer === 'Naughty & Nice') {
+                correctAnswers++;
+                document.getElementById('question25').classList.add('hidden');
+                document.getElementById('question26').classList.remove('hidden');
+            } else if (question === 26 && answer === 'Arrpheus') {
+                correctAnswers++;
+                document.getElementById('question26').classList.add('hidden');
+                document.getElementById('result').classList.remove('hidden');
+
+
+                highscore = Math.max(highscore, correctAnswers);
+                document.getElementById('highscore').textContent = highscore;
+            } else {
+                document.getElementById('question' + question).classList.add('hidden');
+                document.getElementById('fail').classList.remove('hidden');
+            }
+        } 
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+🎄🎇🎇🎇🎇🎇🎇🎇🎇🎇--SHIV.A.SINGH🎇🎇🎇🎇🎇🎇🎇🎇🎇🎇🎄
+
